@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <head>
+    <style>
+      #image {
+        width: 15vw;
+        height: 20vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+</head>
+<body>
+    <img id="image" src="https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg" />
+    <script>
+      const image = document.getElementById('image');
+      document.addEventListener('mousemove', (event) => {
+        image.style.top = `${event.clientY}px`;
+        image.style.left = `${event.clientX}px`;
+      });
+    </script>
+</body>
+</html>
